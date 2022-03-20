@@ -7,7 +7,7 @@ class NotesService {
   }
 
   addNote({title, body, tags}) {
-    const id = nanoid(id);
+    const id = nanoid(16);
     const createdAt = new Date().toISOString();
     const updatedAt = createdAt;
 
@@ -30,7 +30,7 @@ class NotesService {
     return this._notes;
   }
 
-  getNoteById() {
+  getNoteById(id) {
     const note = this._notes.filter((n) => n.id === id)[0];
     if (!note) {
       throw new Error('Catatan tidak ditemukan');
