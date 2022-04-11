@@ -1,4 +1,5 @@
 node_modules
+notes-api-webserver.pem
 notes2-api-webserver.pem
 back-end-fundamental-api-webserver.pem
 .env
