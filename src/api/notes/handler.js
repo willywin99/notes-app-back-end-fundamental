@@ -150,7 +150,8 @@ class NotesHandler {
       if (error instanceof ClientError) {
         const response = h.response({
           status: 'fail',
-          message: 'Catatan gagal dihapus. Id tidak ditemukan',
+          // message: 'Catatan gagal dihapus. Id tidak ditemukan',
+          message: error.message,
         });
         response.code(error.statusCode);
         return response;
