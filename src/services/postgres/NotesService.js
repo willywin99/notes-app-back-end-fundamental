@@ -46,9 +46,9 @@ class NotesService {
 
   async getNoteById(id) {
     const query = {
-      text: `SELECT notes.*, users.name
+      text: `SELECT notes.*, users.username
       FROM notes
-      LEFT JOIN users ON users.id = note.owner
+      LEFT JOIN users ON users.id = notes.owner
       WHERE notes.id = $1`,
       values: [id],
     };

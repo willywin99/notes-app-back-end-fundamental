@@ -8,7 +8,7 @@ const routes = (handler) => [
     },
   },
   {
-    method: 'DELTE',
+    method: 'DELETE',
     path: '/collaborations',
     handler: handler.deleteCollaborationHandler,
     options: {
